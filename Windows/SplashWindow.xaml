@@ -1,0 +1,120 @@
+﻿<!-- 
+    My Sudoku 3.1
+    By Joseph King
+    September 9, 2015
+    
+    SplashWindow.xaml
+    -->
+<Window x:Class="MySudoku3_1.SplashWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Welcome to My Sudoku"
+        Height="700"
+        Width="900" 
+        ResizeMode="CanMinimize" 
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Image 
+            Name="imgSudokuBackground" 
+            Height="700" 
+            Width="900" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Stretch="Fill" 
+            Source="/My Sudoku 3.1;component/Images/Steel Background.jpg" />
+        <Image 
+            Name="imgSudokuTitle" 
+            Height="150" 
+            Width="325" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Margin="280,250,0,0" 
+            Stretch="Fill" 
+            Source="/My Sudoku 3.1;component/Images/Sudoku Title Plaque.gif">
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="Image.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation 
+                                Storyboard.TargetName="imgSudokuTitle"
+                                Storyboard.TargetProperty="Opacity"
+                                From="0.0"
+                                To="0.0"
+                                Duration="0:0:2"/>
+                            <DoubleAnimation 
+                                Storyboard.TargetName="imgSudokuTitle"
+                                Storyboard.TargetProperty="Opacity"
+                                From="0.0"
+                                To="1.0"
+                                BeginTime="0:0:2"
+                                Duration="0:0:2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+        <Image 
+            Name="imgVersionText" 
+            Height="100" 
+            Width="141" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Margin="725,445,0,0" 
+            Stretch="Fill" 
+            Source="/My Sudoku 3.1;component/Images/Version Text.gif">
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="Image.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetName="imgVersionText"
+                                Storyboard.TargetProperty="Opacity"
+                                From="0.0"
+                                To="0.0"
+                                Duration="0:0:4" />
+                            <DoubleAnimation
+                                Storyboard.TargetName="imgVersionText"
+                                Storyboard.TargetProperty="Opacity"
+                                From="0.0"
+                                To="1.0"
+                                BeginTime="0:0:4"
+                                Duration="0:0:2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+        <Image 
+            Name="imgClickHere" 
+            Height="42" 
+            Width="337" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Margin="275,475,0,0" 
+            Stretch="Fill" 
+            Source="/My Sudoku 3.1;component/Images/Click Here.gif"
+            MouseLeftButtonDown="imgClickHere_MouseLeftButtonDown">
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="Image.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetName="imgClickHere"
+                                Storyboard.TargetProperty="Opacity"
+                                From="0.0"
+                                To="0.0"
+                                Duration="0:0:8" />
+                            <DoubleAnimation
+                                Storyboard.TargetName="imgClickHere"
+                                Storyboard.TargetProperty="Opacity"
+                                From="0.0"
+                                To="1.0"
+                                BeginTime="0:0:8"
+                                Duration="0:0:2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+    </Grid>
+</Window>

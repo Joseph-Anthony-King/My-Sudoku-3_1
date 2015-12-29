@@ -1,0 +1,48 @@
+﻿<!-- 
+    My Sudoku 3.1
+    By Joseph King
+    September 9, 2015
+    
+    ImageDictionary.xaml
+    -->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ImageSource x:Key="A">/MySudoku;component/Images/FontImages/A.gif</ImageSource>
+    <ImageSource x:Key="B">/MySudoku;component/Images/FontImages/B.gif</ImageSource>
+    <ImageSource x:Key="C">/MySudoku;component/Images/FontImages/C.gif</ImageSource>
+    <ImageSource x:Key="D">/MySudoku;component/Images/FontImages/D.gif</ImageSource>
+    <ImageSource x:Key="E">/MySudoku;component/Images/FontImages/E.gif</ImageSource>
+    <ImageSource x:Key="F">/MySudoku;component/Images/FontImages/F.gif</ImageSource>
+    <ImageSource x:Key="G">/MySudoku;component/Images/FontImages/G.gif</ImageSource>
+    <ImageSource x:Key="H">/MySudoku;component/Images/FontImages/H.gif</ImageSource>
+    <ImageSource x:Key="I">/MySudoku;component/Images/FontImages/I.gif</ImageSource>
+    <ImageSource x:Key="J">/MySudoku;component/Images/FontImages/J.gif</ImageSource>
+    <ImageSource x:Key="K">/MySudoku;component/Images/FontImages/K.gif</ImageSource>
+    <ImageSource x:Key="L">/MySudoku;component/Images/FontImages/L.gif</ImageSource>
+    <ImageSource x:Key="M">/MySudoku;component/Images/FontImages/M.gif</ImageSource>
+    <ImageSource x:Key="N">/MySudoku;component/Images/FontImages/N.gif</ImageSource>
+    <ImageSource x:Key="O">/MySudoku;component/Images/FontImages/O.gif</ImageSource>
+    <ImageSource x:Key="P">/MySudoku;component/Images/FontImages/P.gif</ImageSource>
+    <ImageSource x:Key="Q">/MySudoku;component/Images/FontImages/Q.gif</ImageSource>
+    <ImageSource x:Key="R">/MySudoku;component/Images/FontImages/R.gif</ImageSource>
+    <ImageSource x:Key="S">/MySudoku;component/Images/FontImages/S.gif</ImageSource>
+    <ImageSource x:Key="T">/MySudoku;component/Images/FontImages/T.gif</ImageSource>
+    <ImageSource x:Key="U">/MySudoku;component/Images/FontImages/U.gif</ImageSource>
+    <ImageSource x:Key="V">/MySudoku;component/Images/FontImages/V.gif</ImageSource>
+    <ImageSource x:Key="W">/MySudoku;component/Images/FontImages/W.gif</ImageSource>
+    <ImageSource x:Key="X">/MySudoku;component/Images/FontImages/X.gif</ImageSource>
+    <ImageSource x:Key="Y">/MySudoku;component/Images/FontImages/Y.gif</ImageSource>
+    <ImageSource x:Key="Z">/MySudoku;component/Images/FontImages/Z.gif</ImageSource>
+    <ImageSource x:Key="blank">/MySudoku;component/Images/FontImages/blank.gif</ImageSource>
+    <ImageSource x:Key="comma">/MySudoku;component/Images/FontImages/comma.gif</ImageSource>
+    <ImageSource x:Key="zero">/MySudoku;component/Images/FontImages/0.gif</ImageSource>
+    <ImageSource x:Key="one">/MySudoku;component/Images/FontImages/1.gif</ImageSource>
+    <ImageSource x:Key="two">/MySudoku;component/Images/FontImages/2.gif</ImageSource>
+    <ImageSource x:Key="three">/MySudoku;component/Images/FontImages/3.gif</ImageSource>
+    <ImageSource x:Key="four">/MySudoku;component/Images/FontImages/4.gif</ImageSource>
+    <ImageSource x:Key="five">/MySudoku;component/Images/FontImages/5.gif</ImageSource>
+    <ImageSource x:Key="six">/MySudoku;component/Images/FontImages/6.gif</ImageSource>
+    <ImageSource x:Key="seven">/MySudoku;component/Images/FontImages/7.gif</ImageSource>
+    <ImageSource x:Key="eight">/MySudoku;component/Images/FontImages/8.gif</ImageSource>
+    <ImageSource x:Key="nine">/MySudoku;component/Images/FontImages/9.gif</ImageSource>
+</ResourceDictionary>

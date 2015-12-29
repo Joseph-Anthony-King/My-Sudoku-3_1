@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{63DF3B02-131C-4EDA-A3DD-C13CB5795F2D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MySudoku3_1</RootNamespace>
+    <AssemblyName>My Sudoku 3.1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>3.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>MySudoku3_1.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>MySudoku3_1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFCustomMessageBox, Version=1.0.7.39267, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WPFCustomMessageBox.1.0.7\lib\WPFCustomMessageBox.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Classes\Element.cs" />
+    <Compile Include="Classes\GameSerializer.cs" />
+    <Compile Include="Classes\SavedGameRepository.cs" />
+    <Compile Include="Classes\SavedUserRepository.cs" />
+    <Compile Include="Classes\SodukuSolutionGenerator.cs" />
+    <Compile Include="Classes\SudokuExtensionMethods.cs" />
+    <Compile Include="Classes\SudokuGame.cs" />
+    <Compile Include="Classes\SudokuUtilities.cs" />
+    <Compile Include="Classes\User.cs" />
+    <Compile Include="Classes\UserSerializer.cs" />
+    <Compile Include="Classes\UserUpdateEventArgs.cs" />
+    <Compile Include="Windows\NewUserWindow.xaml.cs">
+      <DependentUpon>NewUserWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SolutionWindow.xaml.cs">
+      <DependentUpon>SolutionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SplashWindow.xaml.cs">
+      <DependentUpon>SplashWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\VictoryWindow.xaml.cs">
+      <DependentUpon>VictoryWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Windows\EditUserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\LoginUserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Windows\EditUserWindow.xaml.cs">
+      <DependentUpon>EditUserWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\LoginUserWindow.xaml.cs">
+      <DependentUpon>LoginUserWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Windows\NewUserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SolutionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SplashWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\VictoryWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XAML\ImageDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\1.gif" />
+    <Resource Include="Images\1platinum.gif" />
+    <Resource Include="Images\2.gif" />
+    <Resource Include="Images\2platinum.gif" />
+    <Resource Include="Images\3.gif" />
+    <Resource Include="Images\3platinum.gif" />
+    <Resource Include="Images\4.gif" />
+    <Resource Include="Images\4platinum.gif" />
+    <Resource Include="Images\5.gif" />
+    <Resource Include="Images\5platinum.gif" />
+    <Resource Include="Images\6.gif" />
+    <Resource Include="Images\6platinum.gif" />
+    <Resource Include="Images\7.gif" />
+    <Resource Include="Images\7platinum.gif" />
+    <Resource Include="Images\8.gif" />
+    <Resource Include="Images\8platinum.gif" />
+    <Resource Include="Images\9.gif" />
+    <Resource Include="Images\9platinum.gif" />
+    <Resource Include="Images\Choose Your Difficulty Level.gif" />
+    <Resource Include="Images\Click Here.gif" />
+    <Resource Include="Images\Confirm Password.gif" />
+    <Resource Include="Images\Congratulations You Won.gif" />
+    <Resource Include="Images\Create New Game.gif" />
+    <Resource Include="Images\Edit User Title.gif" />
+    <Resource Include="Images\FontImages\0.gif" />
+    <Resource Include="Images\FontImages\1.gif" />
+    <Resource Include="Images\FontImages\2.gif" />
+    <Resource Include="Images\FontImages\3.gif" />
+    <Resource Include="Images\FontImages\4.gif" />
+    <Resource Include="Images\FontImages\5.gif" />
+    <Resource Include="Images\FontImages\6.gif" />
+    <Resource Include="Images\FontImages\7.gif" />
+    <Resource Include="Images\FontImages\8.gif" />
+    <Resource Include="Images\FontImages\9.gif" />
+    <Resource Include="Images\FontImages\A.gif" />
+    <Resource Include="Images\FontImages\B.gif" />
+    <Resource Include="Images\FontImages\blank.gif" />
+    <Resource Include="Images\FontImages\C.gif" />
+    <Resource Include="Images\FontImages\comma.gif" />
+    <Resource Include="Images\FontImages\D.gif" />
+    <Resource Include="Images\FontImages\E.gif" />
+    <Resource Include="Images\FontImages\F.gif" />
+    <Resource Include="Images\FontImages\G.gif" />
+    <Resource Include="Images\FontImages\H.gif" />
+    <Resource Include="Images\FontImages\I.gif" />
+    <Resource Include="Images\FontImages\J.gif" />
+    <Resource Include="Images\FontImages\K.gif" />
+    <Resource Include="Images\FontImages\L.gif" />
+    <Resource Include="Images\FontImages\M.gif" />
+    <Resource Include="Images\FontImages\N.gif" />
+    <Resource Include="Images\FontImages\O.gif" />
+    <Resource Include="Images\FontImages\P.gif" />
+    <Resource Include="Images\FontImages\Q.gif" />
+    <Resource Include="Images\FontImages\R.gif" />
+    <Resource Include="Images\FontImages\S.gif" />
+    <Resource Include="Images\FontImages\T.gif" />
+    <Resource Include="Images\FontImages\U.gif" />
+    <Resource Include="Images\FontImages\V.gif" />
+    <Resource Include="Images\FontImages\W.gif" />
+    <Resource Include="Images\FontImages\X.gif" />
+    <Resource Include="Images\FontImages\Y.gif" />
+    <Resource Include="Images\FontImages\Z.gif" />
+    <Resource Include="Images\imgLemur.gif" />
+    <Resource Include="Images\imgMountainLion.gif" />
+    <Resource Include="Images\imgSloth.gif" />
+    <Resource Include="Images\InstructionsScreen01.jpg" />
+    <Resource Include="Images\InstructionsScreen02.jpg" />
+    <Resource Include="Images\InstructionsScreen03.jpg" />
+    <Resource Include="Images\InstructionsScreen04.jpg" />
+    <Resource Include="Images\InstructionsScreen05.jpg" />
+    <Resource Include="Images\InstructionsScreen06.jpg" />
+    <Resource Include="Images\InstructionsScreen07.jpg" />
+    <Resource Include="Images\InstructionsScreen08.jpg" />
+    <Resource Include="Images\InstructionsScreen09.jpg" />
+    <Resource Include="Images\InstructionsScreen10.jpg" />
+    <Resource Include="Images\InstructionsScreen11.jpg" />
+    <Resource Include="Images\InstructionsScreen12.jpg" />
+    <Resource Include="Images\InstructionsScreen13.jpg" />
+    <Resource Include="Images\InstructionsScreen14.jpg" />
+    <Resource Include="Images\InstructionsScreen15.jpg" />
+    <Resource Include="Images\InstructionsScreen16.jpg" />
+    <Resource Include="Images\InstructionsScreen17.jpg" />
+    <Resource Include="Images\InstructionsScreen18.jpg" />
+    <Resource Include="Images\InstructionsScreen19.jpg" />
+    <Resource Include="Images\InstructionsScreen20.jpg" />
+    <Resource Include="Images\InstructionsScreen21.jpg" />
+    <Resource Include="Images\InstructionsScreen22.jpg" />
+    <Resource Include="Images\Leaping Lemur.gif" />
+    <Resource Include="Images\Load Saved Game.gif" />
+    <Resource Include="Images\Login User Title.gif" />
+    <Resource Include="Images\MettalicScreenBorder.gif" />
+    <Resource Include="Images\Mighty Mountain Lion.gif" />
+    <Resource Include="Images\New User Background.jpg" />
+    <Resource Include="Images\New User Title.gif" />
+    <Resource Include="Images\Password.gif" />
+    <Resource Include="Images\Steady Sloth.gif" />
+    <Resource Include="Images\Steel Background.jpg" />
+    <Resource Include="Images\Sudoku Title Plaque 2.gif" />
+    <Resource Include="Images\Sudoku Title Plaque.gif" />
+    <Resource Include="Images\The Solution Was.gif" />
+    <Resource Include="Images\Top Ten Games.gif" />
+    <Resource Include="Images\Top Ten Leaping Lemurs.gif" />
+    <Resource Include="Images\Top Ten Mountain Lions.gif" />
+    <Resource Include="Images\Top Ten Steady Sloths.gif" />
+    <Resource Include="Images\User Name.gif" />
+    <Resource Include="Images\Version Text.gif" />
+    <Resource Include="Images\Welcome Back.gif" />
+    <Resource Include="Images\Welcome.gif" />
+    <Resource Include="Images\YouWin.jpg" />
+    <Resource Include="Images\YouWinGreen.jpg" />
+    <Resource Include="Images\YouWinRed.jpg" />
+    <Resource Include="Images\YouWinYellow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MySudoku3_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Music\Nine to Nine.wav" />
+    <Content Include="Music\VictorySong.wav" />
+    <Resource Include="MySudoku3_1.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
