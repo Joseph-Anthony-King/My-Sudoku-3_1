@@ -103,7 +103,7 @@ namespace MySudoku3_1
         public MainWindow(SoundPlayer theme)
         {
             InitializeComponent();
-
+            
             MySudokuTheme = theme;
 
             SavedGameRepository = new SavedGameRepository(); // Create an instance of the saved game repository

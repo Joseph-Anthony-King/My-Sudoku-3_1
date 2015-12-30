@@ -95,7 +95,7 @@ namespace MySudoku3_1
         {
             string localPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
 
-            string appPath = Path.Combine(localPath, "MySudoku2\\");
+            string appPath = Path.Combine(localPath, "MySudoku3_0\\");
 
             if (!Directory.Exists(appPath))
             {

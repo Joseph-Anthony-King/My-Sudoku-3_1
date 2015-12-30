@@ -722,7 +722,7 @@
                 VerticalAlignment="Top" 
                 Margin="500,350,0,0" 
                 Stretch="Fill" 
-                Source="/My Sudoku 3.1;component/Images/Mighty Mountain Lion.gif" 
+                Source="/My Sudoku 3.1;component/Images/imgMountainLion.gif" 
                 MouseLeftButtonDown="imgMightyMountainLion_MouseLeftButtonDown" />
         </Grid>
         <!-- Load Game Button Panel -->

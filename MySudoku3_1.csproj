@@ -175,6 +175,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -309,6 +310,7 @@
     <Resource Include="Images\MySudoku3_1.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="GNU GPL.txt" />
     <Content Include="Music\Nine to Nine.wav" />
     <Content Include="Music\VictorySong.wav" />
     <Resource Include="MySudoku3_1.ico" />
