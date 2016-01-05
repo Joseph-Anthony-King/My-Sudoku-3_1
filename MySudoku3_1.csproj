@@ -310,10 +310,10 @@
     <Resource Include="Images\MySudoku3_1.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="MySudoku3_1.ico" />
     <Resource Include="GNU GPL.txt" />
     <Content Include="Music\Nine to Nine.wav" />
     <Content Include="Music\VictorySong.wav" />
-    <Resource Include="MySudoku3_1.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

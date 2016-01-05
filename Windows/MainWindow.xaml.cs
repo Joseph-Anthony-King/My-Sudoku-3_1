@@ -58,47 +58,6 @@ namespace MySudoku3_1
         public List<Image> ListOfCreateGameUserNameCharacters { get; set; } // List of images to display user name when creating a game
         #endregion
 
-        #region Initialize Bitmap images for user name
-        BitmapImage A;
-        BitmapImage B;
-        BitmapImage C;
-        BitmapImage D;
-        BitmapImage E;
-        BitmapImage F;
-        BitmapImage G;
-        BitmapImage H;
-        BitmapImage I;
-        BitmapImage J;
-        BitmapImage K;
-        BitmapImage L;
-        BitmapImage M;
-        BitmapImage N;
-        BitmapImage O;
-        BitmapImage P;
-        BitmapImage Q;
-        BitmapImage R;
-        BitmapImage S;
-        BitmapImage T;
-        BitmapImage U;
-        BitmapImage V;
-        BitmapImage W;
-        BitmapImage X;
-        BitmapImage Y;
-        BitmapImage Z;
-        BitmapImage blank;
-        BitmapImage zero;
-        BitmapImage one;
-        BitmapImage two;
-        BitmapImage three;
-        BitmapImage four;
-        BitmapImage five;
-        BitmapImage six;
-        BitmapImage seven;
-        BitmapImage eight;
-        BitmapImage nine;
-        BitmapImage comma;
-        #endregion
-
         #region MainWindow(SoundPlayer theme)
         public MainWindow(SoundPlayer theme)
         {
@@ -2789,12 +2748,12 @@ namespace MySudoku3_1
         {
             foreach (Image image in ListOfEvenNumberUserNameCharacters)
             {
-                image.Source = blank;
+                image.Source = (ImageSource)FindResource("blank");
             }
 
             foreach (Image image in ListOfOddNumberUserNameCharacters)
             {
-                image.Source = blank;
+                image.Source = (ImageSource)FindResource("blank");
             }
 
             string userName = User.UserName.ToUpper();
@@ -2936,7 +2895,7 @@ namespace MySudoku3_1
         {
             foreach (Image image in ListOfCreateGameUserNameCharacters)
             {
-                image.Source = blank;
+                image.Source = (ImageSource)FindResource("blank");
             }
 
             string userName = User.UserName.ToUpper();
@@ -2976,9 +2935,7 @@ namespace MySudoku3_1
 
                 i++;
             }
-
-            ListOfCreateGameUserNameCharacters[User.UserName.Length].Source = comma;
-            
+                        
             stkEvenNumberUserName.Visibility = Visibility.Visible;
 
         }
