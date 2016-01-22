@@ -72,7 +72,7 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="WPFCustomMessageBox, Version=1.0.7.39267, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\WPFCustomMessageBox.1.0.7\lib\WPFCustomMessageBox.dll</HintPath>
+      <HintPath>packages\WPFCustomMessageBox.1.0.7\lib\WPFCustomMessageBox.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -285,6 +285,7 @@
     <Resource Include="Images\Login User Title.gif" />
     <Resource Include="Images\MettalicScreenBorder.gif" />
     <Resource Include="Images\Mighty Mountain Lion.gif" />
+    <Resource Include="Images\MySudoku3_1.ico" />
     <Resource Include="Images\New User Background.jpg" />
     <Resource Include="Images\New User Title.gif" />
     <Resource Include="Images\Password.gif" />
@@ -305,9 +306,6 @@
     <Resource Include="Images\YouWinGreen.jpg" />
     <Resource Include="Images\YouWinRed.jpg" />
     <Resource Include="Images\YouWinYellow.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\MySudoku3_1.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="MySudoku3_1.ico" />
